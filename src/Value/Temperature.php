@@ -6,7 +6,7 @@ use Soandso\Units\Contracts\Quantity;
 use Soandso\Units\Enum\Temperature as TemperatureUnit;
 use Soandso\Units\Converter\Temperature as TemperatureConverter;
 
-class Temperature implements Quantity
+final class Temperature implements Quantity
 {
     public function __construct(private float $value, private TemperatureUnit $unit)
     {

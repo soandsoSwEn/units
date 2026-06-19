@@ -5,7 +5,7 @@ namespace Soandso\Units\Converter;
 use Soandso\Units\Enum\Speed as SpeedUnit;
 use Soandso\Units\Value\Speed as SpeedValue;
 
-class Speed
+final class Speed
 {
     /**
      * Convert speed to target unit.

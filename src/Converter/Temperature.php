@@ -5,7 +5,7 @@ namespace Soandso\Units\Converter;
 use Soandso\Units\Value\Temperature as TemperatureValue;
 use Soandso\Units\Enum\Temperature as TemperatureUnit;
 
-class Temperature
+final class Temperature
 {
     public static function convert(TemperatureValue $temperature, TemperatureUnit $targetUnit): TemperatureValue
     {
