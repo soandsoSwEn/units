@@ -24,10 +24,8 @@ class Temperature
         );
     }
 
-    private static function toCelsius(
-        float $value,
-        TemperatureUnit $unit,
-    ): float {
+    private static function toCelsius(float $value, TemperatureUnit $unit): float
+    {
         return match ($unit) {
             TemperatureUnit::C => $value,
             TemperatureUnit::F => ($value - 32) * 5 / 9,
@@ -35,10 +33,8 @@ class Temperature
         };
     }
 
-    private static function fromCelsius(
-        float $value,
-        TemperatureUnit $unit,
-    ): float {
+    private static function fromCelsius(float $value, TemperatureUnit $unit): float
+    {
         return match ($unit) {
             TemperatureUnit::C => $value,
             TemperatureUnit::F => ($value * 9 / 5) + 32,
