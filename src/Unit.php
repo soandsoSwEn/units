@@ -6,15 +6,15 @@ use Soandso\Units\Value\Temperature;
 
 class Unit
 {
-    const string TEMPERATURE = 'temperature';
+    public const string TEMPERATURE = 'temperature';
 
-    const string PRESSURE = 'pressure';
+    public const string PRESSURE = 'pressure';
 
-    const string SPEED = 'speed';
+    public const string SPEED = 'speed';
 
-    const string PRECIPITATION = 'precipitation';
+    public const string PRECIPITATION = 'precipitation';
 
-    const string HUMIDITY = 'humidity';
+    public const string HUMIDITY = 'humidity';
 
-    const string DISTANCE = 'distance';
+    public const string DISTANCE = 'distance';
 }

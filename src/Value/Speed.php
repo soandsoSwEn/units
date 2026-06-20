@@ -167,10 +167,7 @@ final readonly class Speed implements Quantity
      */
     public function equals(self $speed): bool
     {
-        return abs(
-                $this->toMs()->value()
-                - $speed->toMs()->value()
-            ) < 0.00001;
+        return abs($this->toMs()->value() - $speed->toMs()->value()) < 0.00001;
     }
 
     /**
@@ -178,10 +175,6 @@ final readonly class Speed implements Quantity
      */
     public function __toString(): string
     {
-        return sprintf(
-            '%s %s',
-            $this->value,
-            $this->unit->value,
-        );
+        return sprintf('%s %s', $this->value, $this->unit->value);
     }
 }

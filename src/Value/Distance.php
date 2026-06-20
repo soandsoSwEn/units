@@ -6,7 +6,7 @@ use Soandso\Units\Contracts\Quantity;
 use Soandso\Units\Enum\Distance as DistanceUnit;
 use Soandso\Units\Converter\Distance as DistanceConverter;
 
-final readonly class Distance  implements Quantity
+final readonly class Distance implements Quantity
 {
     /**
      * Create a new distance value.

@@ -104,18 +104,11 @@ final class Pressure implements Quantity
 
     public function equals(self $pressure): bool
     {
-        return abs(
-                $this->toHpa()->value()
-                - $pressure->toHpa()->value()
-            ) < 0.00001;
+        return abs($this->toHpa()->value() - $pressure->toHpa()->value()) < 0.00001;
     }
 
     public function __toString(): string
     {
-        return sprintf(
-            '%s %s',
-            $this->value,
-            $this->unit->value,
-        );
+        return sprintf('%s %s', $this->value, $this->unit->value);
     }
 }

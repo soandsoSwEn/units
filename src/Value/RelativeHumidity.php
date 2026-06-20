@@ -84,10 +84,7 @@ final readonly class RelativeHumidity implements Quantity
      */
     public function equals(self $humidity): bool
     {
-        return abs(
-                $this->toFraction()->value()
-                - $humidity->toFraction()->value()
-            ) < 0.00001;
+        return abs($this->toFraction()->value() - $humidity->toFraction()->value()) < 0.00001;
     }
 
     /**
@@ -95,10 +92,6 @@ final readonly class RelativeHumidity implements Quantity
      */
     public function __toString(): string
     {
-        return sprintf(
-            '%s %s',
-            $this->value,
-            $this->unit->value,
-        );
+        return sprintf('%s %s', $this->value, $this->unit->value);
     }
 }
