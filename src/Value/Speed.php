@@ -100,10 +100,7 @@ final readonly class Speed implements Quantity
      */
     public function to(SpeedUnit $unit): self
     {
-        return SpeedConverter::convert(
-            $this,
-            $unit,
-        );
+        return SpeedConverter::convert($this, $unit);
     }
 
     /**
@@ -176,5 +173,10 @@ final readonly class Speed implements Quantity
     public function __toString(): string
     {
         return sprintf('%s %s', $this->value, $this->unit->value);
+    }
+
+    public function convertTo(SpeedUnit $unit): self
+    {
+        return $this->to($unit);
     }
 }

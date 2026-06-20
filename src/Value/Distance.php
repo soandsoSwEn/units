@@ -209,10 +209,11 @@ final readonly class Distance implements Quantity
      */
     public function __toString(): string
     {
-        return sprintf(
-            '%s %s',
-            $this->value,
-            $this->unit->value,
-        );
+        return sprintf('%s %s', $this->value, $this->unit->value);
+    }
+
+    public function convertTo(DistanceUnit $unit): self
+    {
+        return $this->to($unit);
     }
 }

@@ -145,4 +145,9 @@ final readonly class Precipitation implements Quantity
     {
         return sprintf('%s %s', $this->value, $this->unit->value);
     }
+
+    public function convertTo(PrecipitationUnit $unit): self
+    {
+        return $this->to($unit);
+    }
 }

@@ -111,4 +111,9 @@ final class Pressure implements Quantity
     {
         return sprintf('%s %s', $this->value, $this->unit->value);
     }
+
+    public function convertTo(PressureUnit $unit): self
+    {
+        return $this->to($unit);
+    }
 }

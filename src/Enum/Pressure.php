@@ -4,21 +4,38 @@ namespace Soandso\Units\Enum;
 
 enum Pressure: string
 {
+    /**
+     * hecto Pascals
+     */
     case HPA = 'hPa';
 
-    //ICAO / METAR
+    /**
+     * Inches of mercury
+     */
     case INHG = 'inHg';
 
-    //СІС/СНД, historical summaries
+    /**
+     * millimeters of mercury
+     */
     case MMHG = 'mmHg';
 
-    //SI
+    /**
+     * Pascals
+     */
     case PA = 'Pa';
+
+    /**
+     * kilo Pascals
+     */
     case KPA = 'kPa';
 
-    //US engineering
+    /**
+     * pounds per square inch
+     */
     case PSI = 'psi';
 
-    //Meteorology/oceanography
+    /**
+     * millibars
+     */
     case MB = 'mb';
 }

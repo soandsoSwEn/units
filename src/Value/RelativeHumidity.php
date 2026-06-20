@@ -94,4 +94,9 @@ final readonly class RelativeHumidity implements Quantity
     {
         return sprintf('%s %s', $this->value, $this->unit->value);
     }
+
+    public function convertTo(HumidityUnit $unit): self
+    {
+        return $this->to($unit);
+    }
 }
