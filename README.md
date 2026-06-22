@@ -49,11 +49,11 @@ use Soandso\Units\Unit;
 
 $temperature = Quantity::get(Unit::TEMPERATURE);
 
-echo $temperature->name;
-echo $temperature->description;
-echo $temperature->class;
+$temperature->name;
+$temperature->description;
+$temperature->class;
 
-print_r($temperature->units);
+$temperature->units;
 ```
 
 Example output:
@@ -79,15 +79,9 @@ Soandso\Units\Value\Temperature
 ```php
 use Soandso\Units\Value\Temperature;
 
-echo Temperature::c(20)
+Temperature::c(20)
     ->toF()
-    ->value();
-```
-
-Output:
-
-```text
-68
+    ->value(); //68
 ```
 
 ### Generic Conversion
@@ -96,15 +90,9 @@ Output:
 use Soandso\Units\Value\Temperature;
 use Soandso\Units\Enum\Temperature as TemperatureUnit;
 
-echo Temperature::c(20)
+Temperature::c(20)
     ->convertTo(TemperatureUnit::F)
-    ->value();
-```
-
-Output:
-
-```text
-68
+    ->value(); //68
 ```
 
 ---
@@ -126,8 +114,8 @@ Temperature::k(293.15);
 ```php
 $temperature = Temperature::c(20);
 
-echo $temperature->value();
-echo $temperature->unit()->value;
+$temperature->value();
+$temperature->unit()->value;
 ```
 
 ---
@@ -175,8 +163,8 @@ use Soandso\Units\Value\Temperature;
 
 $celsius = Temperature::c(20);
 
-echo $celsius->toF()->value(); //68
-echo $celsius->toK()->value(); //293.15
+$celsius->toF()->value(); //68
+$celsius->toK()->value(); //293.15
 ```
 
 ---
