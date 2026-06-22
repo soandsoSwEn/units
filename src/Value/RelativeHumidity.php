@@ -95,6 +95,9 @@ final readonly class RelativeHumidity implements Quantity
         return sprintf('%s %s', $this->value, $this->unit->value);
     }
 
+    /**
+     * Converts the relative humidity to the specified unit.
+     */
     public function convertTo(HumidityUnit $unit): self
     {
         return $this->to($unit);

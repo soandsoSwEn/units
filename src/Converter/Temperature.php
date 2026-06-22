@@ -5,8 +5,17 @@ namespace Soandso\Units\Converter;
 use Soandso\Units\Value\Temperature as TemperatureValue;
 use Soandso\Units\Enum\Temperature as TemperatureUnit;
 
+/**
+ * Temperature unit conversion service.
+ */
 final class Temperature
 {
+    /**
+     * Converts a temperature value to the specified unit.
+     *
+     * If the source and target units are identical, the original instance is returned without
+     * performing any calculations.
+     */
     public static function convert(TemperatureValue $temperature, TemperatureUnit $targetUnit): TemperatureValue
     {
         if ($temperature->unit() === $targetUnit) {
@@ -24,6 +33,9 @@ final class Temperature
         );
     }
 
+    /**
+     * Converts a temperature value to degrees Celsius.
+     */
     private static function toCelsius(float $value, TemperatureUnit $unit): float
     {
         return match ($unit) {
@@ -33,6 +45,9 @@ final class Temperature
         };
     }
 
+    /**
+     * Converts a temperature value from degrees Celsius to the specified target unit.
+     */
     private static function fromCelsius(float $value, TemperatureUnit $unit): float
     {
         return match ($unit) {
